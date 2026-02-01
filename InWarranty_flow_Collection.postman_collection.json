@@ -5931,7 +5931,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for count api request for supervisor\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
@@ -6107,7 +6107,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for pending for assignment api request\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const jobNumber = pm.collectionVariables.get(\"job_Number\")\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
@@ -6321,7 +6321,7 @@
             "exec": [
               "console.log(\"Running positive tests for engineer mapped to service center\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const responseSchema = {\r",
               "  \"type\": \"object\",\r",
               "  \"properties\": {\r",
@@ -7042,7 +7042,7 @@
             "exec": [
               "console.log(\"Running positive tests for login api request for engineer\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
@@ -7240,7 +7240,7 @@
             "exec": [
               "console.log(\"Running postive tests response user details api request for engineer\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const engID = pm.collectionVariables.get(\"engId\")\r",
               "const responseSchema = {\r",
               "  \"title\": \"Generated Schema\",\r",
@@ -7584,7 +7584,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for count API request engineer\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
               "})\r",
@@ -7808,7 +7808,7 @@
             "exec": [
               "console.log(\"Running positive tests for Pending for repair details api request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const engID = parseInt(pm.collectionVariables.get(\"engId\"))\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
@@ -8076,7 +8076,7 @@
             "exec": [
               "console.log(\"Running positive tests for Repair completed api request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const engID = parseInt(pm.collectionVariables.get(\"engId\"))\r",
               "\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
@@ -8457,7 +8457,7 @@
             "exec": [
               "console.log(\"Running positive tests for jobs Assigned API request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const engID = parseInt(pm.collectionVariables.get(\"engId\"))\r",
               "const jobID = pm.collectionVariables.get(\"job_Id\")\r",
               "pm.test(\"verify status code is 200\", function () {\r",
@@ -8715,7 +8715,7 @@
             "exec": [
               "console.log(\"Runnibg positive tests for master api request for engineer\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const responseSchema = {\r",
               "  \"title\": \"Generated Schema\",\r",
               "  \"description\": \"Schema generated from JSON data\",\r",
@@ -10266,7 +10266,7 @@
             "exec": [
               "console.log(\"Running positive test for Repair completed api request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.status(200)\r",
@@ -10801,7 +10801,7 @@
             "exec": [
               "console.log(\"Running positive tests for jobs Assigned API request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const jobID = pm.collectionVariables.get(\"job_Id\")\r",
               "\r",
               "var job_IDs = responseBody.data.map(function(item){\r",
@@ -11124,7 +11124,7 @@
             "exec": [
               "console.log(\"Running positive tests for user details API request\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
@@ -11345,7 +11345,7 @@
             "exec": [
               "console.log(\"Running positive tests for count API request QC\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
               "})\r",
@@ -11543,7 +11543,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive test for pending for QC\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
               "})\r",
@@ -11828,7 +11828,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for QC completed API request\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const responseSchema = {\r",
               "  \"type\": \"object\",\r",
               "  \"properties\": {\r",
@@ -28482,7 +28482,7 @@
           "script": {
             "exec": [
               "console.log(\"Running postive tests for QC job list api\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const jobID = pm.collectionVariables.get(\"job_Id\")\r",
               "const responseSchema = {\r",
               "    \"definitions\": {\r",
@@ -28940,7 +28940,7 @@
           "script": {
             "exec": [
               "console.log(\"Running ppsitive tests for Completed QC for Job Api\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "pm.test(\"Verify status code is 200\", function(){\r",
               "    pm.response.to.have.status(200)\r",
@@ -29529,7 +29529,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests pending for delivery api request\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "const jobID = pm.collectionVariables.get(\"job_Id\")\r",
               "const responseSchema = {\r",
@@ -30077,7 +30077,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for ReadyforDelivery jobs api request\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "\r",
               "const responseSchema = {\r",
               "    \"definitions\": {\r",
@@ -30525,7 +30525,7 @@
             "exec": [
               "console.log(\"Running positive test for Deliever to custome api\")\r",
               "\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const responseSchema = {\r",
               "    \"definitions\": {\r",
               "        \"Welcome10\": {\r",
@@ -30920,7 +30920,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for searchjobdetails api request\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "const jobID = pm.collectionVariables.get(\"job_Id\")\r",
               "const firstName = pm.collectionVariables.get(\"firstName\")\r",
               "const lastName = pm.collectionVariables.get(\"lastName\")\r",
@@ -31183,7 +31183,7 @@
           "script": {
             "exec": [
               "console.log(\"Running positive tests for jobdetailsApi request\")\r",
-              "const responseBody = pm.response.json()\r",
+              "var responseBody = pm.response.json()\r",
               "var jobId = pm.collectionVariables.get(\"job_Id\")\r",
               "var firstName = pm.collectionVariables.get(\"firstName\")\r",
               "var lastName = pm.collectionVariables.get(\"lastName\")\r",
